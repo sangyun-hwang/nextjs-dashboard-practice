@@ -35,6 +35,7 @@ export default function EditInvoiceForm({
             name="customerId"
             defaultValue={invoice.customer_id}
             className="block w-full rounded-md border border-gray-200 p-2 text-sm"
+            aria-describedby="customer-error"
           >
             <option value="" disabled>
               Select a customer
@@ -58,10 +59,11 @@ export default function EditInvoiceForm({
             step="0.01"
             defaultValue={invoice.amount}
             className="block w-full rounded-md border border-gray-200 p-2 text-sm"
+            aria-describedby="amount-error"
           />
         </div>
 
-        <fieldset>
+        <fieldset aria-describedby="status-error">
           <legend className="mb-2 block text-sm font-medium">
             Set the invoice status
           </legend>
